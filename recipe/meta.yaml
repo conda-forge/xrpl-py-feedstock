@@ -12,12 +12,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - poetry
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
     - base58 >=2.1.0,<3
@@ -27,7 +27,7 @@ requirements:
     - deprecated >=1.2.13,<2
     - types-Deprecated >=1.2.9,<2
     - pycryptodome >=3.16.0,<4
-    - python >=3.7
+    - python >={{ python_min }}
     - typing-extensions >=4.2.0,<5
 
 test:
@@ -36,6 +36,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   source_files:
     - tests
   commands:
