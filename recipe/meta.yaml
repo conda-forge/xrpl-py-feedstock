@@ -1,5 +1,5 @@
 {% set name = "xrpl-py" %}
-{% set version = "4.3.0" %}
+{% set version = "4.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/XRPLF/xrpl-py/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c045cfcb1899a3da3fb256b154967edb5660903a8f2a10401bb386e89dce58b7
+  sha256: eaba58e8a89f5d83c91db0273159de54544c9a167e08152340a41dd224def16c
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - base58 >=2.1.0,<3
     - ECPy >=1.2.5,<2
     - httpx >=0.18.1,<0.25.0
-    - websockets >=11.0,<12
+    - websockets >=13.0
     - deprecated >=1.2.13,<2
     - types-Deprecated >=1.2.9,<2
     - pycryptodome >=3.16.0,<4
