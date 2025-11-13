@@ -23,7 +23,7 @@ requirements:
     - base58 >=2.1.0,<3
     - ECPy >=1.2.5,<2
     - httpx >=0.18.1,<0.25.0
-    - websockets >=11.0,<12
+    - websockets >=13.0
     - deprecated >=1.2.13,<2
     - types-Deprecated >=1.2.9,<2
     - pycryptodome >=3.16.0,<4
