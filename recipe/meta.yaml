@@ -1,5 +1,5 @@
 {% set name = "xrpl-py" %}
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/XRPLF/xrpl-py/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a9b304a99a3f605249d359e78a68fd916f28d9756b77720f5d0be015fc90e797
+  sha256: 1505d6084c238addec30ea6de7d364e6aa7f571a9af777a8bb47e2132e042713
 
 build:
   noarch: python
@@ -41,7 +41,8 @@ test:
     - tests
   commands:
     - pip check
-    - pytest tests/unit
+    # The native Confidential MPT add-on lives at xrpl/ext/confidential/ but ships as `xrpl-py-confidential` distribution
+    - pytest tests/unit --ignore=tests/unit/ext
 
 about:
   home: https://github.com/XRPLF/xrpl-py
