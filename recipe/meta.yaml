@@ -1,5 +1,5 @@
 {% set name = "xrpl-py" %}
-{% set version = "5.1.0" %}
+{% set version = "5.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/XRPLF/xrpl-py/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1505d6084c238addec30ea6de7d364e6aa7f571a9af777a8bb47e2132e042713
+  sha256: a5c0f786e78dcf4de818089937b8d9b1868cd6e539beec80fb595687197378d2
 
 build:
   noarch: python
